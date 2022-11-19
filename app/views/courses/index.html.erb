@@ -1,1 +1,9 @@
 <%= render(CourseComponent.with_collection(Course.all, notice: "Buy Me")) %>
+<!-- <%= render ListComponent.new do |c| %>
+  <% c.header do %>
+  <%= link_to "List of Available Courses", root_path %>
+  <% end %>
+  <% course_titles = Course.all.pluck(:title).map { |title| {title: title}} %>
+
+  <% c.titles(course_titles) %>
+<% end %> --> 
