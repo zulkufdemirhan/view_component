@@ -7,7 +7,7 @@ class DiscountComponent < ViewComponent::Base
   def render?
     @item.price >= 100
   end
-
+# before_render method
   def before_render
     @star_icon = helpers.star_icon
   end
