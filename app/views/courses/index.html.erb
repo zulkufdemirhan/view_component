@@ -1,9 +1,44 @@
-<%= render(CourseComponent.with_collection(Course.all, notice: "Buy Me")) %>
+<div class="container">
+  <div class="row">
+    <div class="d-flex justify-content-between">
+      <div class="col-3">
+        <%= render(CardComponent.new)  do %>
+          <%= render(CardHeaderComponent.new(header: "General Information", action: link_to("Goes Root", root_path, class: "btn btn-sm btn-danger"))) %>
+          <%= render(CardbodyComponent.new)  do %>
+            <%= render(CardRowFullComponent.new(titlev1:"Company", labelv1:"Demirhan Logistics Company" )) %>
+            <%= render(CardRowComponent.new(title:"MBL No", label:"123456789", title2:"Tax No", label2:"XXXXX12" )) %>
+            <%= render(CardRowComponent.new(title:"twst2", label:"xxxxxxx", title2:"Yeaf", label2:"X55XX12" )) %>
+            <%= render(CardRowFullComponent.new(titlev1:"Comondity", labelv1:"test notu" )) %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="col-3">
+        <%= render(CardComponent.new)  do %>
+          <%= render(CardHeaderComponent.new(header: "General Information" )) %>
+          <%= render(CardbodyComponent.new)  do %>
+            <%= render(CardRowFullComponent.new(titlev1:"Company", labelv1:"Demirhan Logistics Company" )) %>
+            <%= render(CardRowComponent.new(title:"MBL No", label:"123456789", title2:"Tax No", label2:"XXXXX12" )) %>
+            <%= render(CardRowComponent.new(title:"twst2", label:"xxxxxxx", title2:"Yeaf", label2:"X55XX12" )) %>
+            <%= render(CardRowFullComponent.new(titlev1:"Comondity", labelv1:"test notu" )) %>
+
+            <div class="my-4" style="background: red;height: 1px;"></div>
+
+            <%= render(CardRowComponent.new(title:"MBL No", label:"123456789", title2:"Tax No", label2:"XXXXX12" )) %>
+            <%= render(CardRowComponent.new(title:"twst2", label:"xxxxxxx", title2:"Yeaf", label2:"X55XX12" )) %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%#= render(CourseComponent.with_collection(Course.all, notice: "Buy Me")) %>
 <!-- <%= render ListComponent.new do |c| %>
   <% c.header do %>
   <%= link_to "List of Available Courses", root_path %>
   <% end %>
   <% course_titles = Course.all.pluck(:title).map { |title| {title: title}} %>
-
   <% c.titles(course_titles) %>
-<% end %> --> 
+<% end %> -->
+

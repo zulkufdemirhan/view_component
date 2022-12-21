@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'courses#index'
+  root 'cards#index'
+  get "courses", to: "courses#index"
 end

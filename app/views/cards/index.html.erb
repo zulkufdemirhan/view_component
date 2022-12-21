@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-3">
+    <%= render(CardComponent.new)  do %>
+      <%= render(CardHeaderComponent.new(header: "General Information", action: link_to("Bağlantı metni", courses_path, class: "btn btn-sm btn-danger") )) %>
+      <%= render(CardbodyComponent.new)  do %>
+        <%= render(CardRowFullComponent.new(titlev1:"Company", labelv1:"Demirhan Logistics Company" )) %>
+        <%= render(CardRowComponent.new(title:"MBL No", label:"123456789", title2:"Tax No", label2:"XXXXX12" )) %>
+        <%= render(CardRowComponent.new(title:"twst2", label:"xxxxxxx", title2:"Yeaf", label2:"X55XX12" )) %>
+        <%= render(CardRowFullComponent.new(titlev1:"Comondity", labelv1:"testZ" )) %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
